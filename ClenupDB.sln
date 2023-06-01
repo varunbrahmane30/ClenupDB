@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33027.164
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClenupDB", "ClenupDB\ClenupDB.csproj", "{8E0143E1-A597-42D2-ADD5-7EF4B0B9BDE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E0143E1-A597-42D2-ADD5-7EF4B0B9BDE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E0143E1-A597-42D2-ADD5-7EF4B0B9BDE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E0143E1-A597-42D2-ADD5-7EF4B0B9BDE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E0143E1-A597-42D2-ADD5-7EF4B0B9BDE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E9407F7E-B8A1-4873-9296-254F83C7A49A}
+	EndGlobalSection
+EndGlobal
