@@ -31,29 +31,38 @@ namespace PerodicallyDBClean
                 {
                     conn.Open();
 
-                    var cmd = new SqlCommand(ConfigurationManager.AppSettings["FLCEventScript"], conn)
+                    var cmd = new SqlCommand(ConfigurationManager.AppSettings["FLCEventScriptQuery"], conn)
                     {
                         CommandType = CommandType.Text
                     };
 
                     var reader = cmd.ExecuteReader();
 
-                    //Console.WriteLine("Query Executed Sucessfully, " + reader.Read());
-              
-                    var cmd2 = new SqlCommand(ConfigurationManager.AppSettings["FLCModuleInstanceScript"], conn)
+                    Console.WriteLine("FLCEvent Query Executed, " + reader.Read());
+       
+                    var cmd2 = new SqlCommand(ConfigurationManager.AppSettings["FLCModuleInstanceScriptQuery"], conn)
                     {
                         CommandType = CommandType.Text
                     };
 
                     var reader2 = cmd2.ExecuteReader();
+                    Console.WriteLine("FLCModuleInstance Query Executed, " + reader.Read());
 
-                    var cmd3 = new SqlCommand(ConfigurationManager.AppSettings["FLCLogfilesScript"], conn)
+                    var cmd3 = new SqlCommand(ConfigurationManager.AppSettings["FLCLogfilesScriptQuery"], conn)
                     {
                         CommandType = CommandType.Text
                     };
 
                     var reader3 = cmd3.ExecuteReader();
+                    Console.WriteLine("FLCLogFiles Query Executed, " + reader.Read());
 
+                    var cmd4 = new SqlCommand(ConfigurationManager.AppSettings["FLCMailArchiveScriptQuery"], conn)
+                    {
+                        CommandType = CommandType.Text
+                    };
+
+                    var reader4 = cmd4.ExecuteReader();
+                    Console.WriteLine("FLCMailArchive Query Executed, " + reader.Read());
                 }
                 catch (Exception ex)
                 {
@@ -81,7 +90,7 @@ namespace PerodicallyDBClean
 
             if (File.Exists(filePath) == false)
             {
-                FileStream read = System.IO.File.Create(filePath);
+                FileStream read = File.Create(filePath);
 
                 read.Close();
             }
